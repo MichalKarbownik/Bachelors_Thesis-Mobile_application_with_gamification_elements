@@ -1,0 +1,78 @@
+\chapter{Project requirements}\label{ch:requirements}
+\section{Subject of the Project}\label{sec:requirements:subject}
+The subject matter of the project is a working prototype of a mobile application with gamification mechanisms and its verification.
+
+
+\section{Users}\label{sec:requirements:users}
+The application will have three types of users - a \textit{New User}, a \textit{Parent} and a \textit{Child}.
+
+\subsection{New User}\label{subsec:requirements:users:new}
+A \textit{New User} is a person, who does not yet have an account in the system. They should be able to create an account.
+
+\subsection{Parent}\label{subsec:requirements:users:parent}
+A \textit{Parent} user is a kind of administrator user. They have access to their account, where they can add children, set, modify and delete tasks and rewards for them, as well as manage the application. It is also them who has access to children's devices and sets up their profiles. They have access to all settings, where they can modify the application's behaviour.
+
+\subsection{Child}\label{subsec:requirements:users:child}
+A \textit{Child} user should be restricted from any administrative action within the application. The implemented mechanisms should not encourage spending more time using the phone, but to be more productive. They should have access to their profile information, tasks and rewards.
+
+
+\section{Functional requirements}\label{sec:requirements:functional}
+The IEEE Standard 830 \cite{trippIEEERecommendedPractice1993} is one of the most renowned documents specifying a traditional approach to defining requirements, which should start with \say{The~system shall...}. Bob Lightsey, in \textit{Systems Engineering Fundamentals} from 2001, states that functional requirements \say{Define what the system must accomplish or must
+be able to do.} \cite{lightseySystemsEngineeringFundamentals2001}. This kind of approach is referred to as \textit{system-centered}.
+\\\\
+Capturing functional requirements as \textit{user stories} is \textit{user-centred}. \say{User stories are the right size for planning, comprehensible by everyone, work for iterative development and support opportunistic design}, which is \say{just right for very early planning} \cite{cohnUserStoriesApplied2004}.
+// TODO: Mention INVEST acronym.
+\\\\
+User stories, for each user separately, will be used to define functional requirements for the project. Numeration of every requirement will be prefixed with \textit{FR} for a future reference.
+
+
+\subsection{New User user stories}\label{subsec:requirements:functional:new}
+\begin{enumerate}[label=FR \arabic*.,leftmargin=3\parindent]
+\item\label{fr:new:device-belonging} As a New User, I want to be able to choose parent device belonging so that after registration, I am not confused about my role within the application.
+\item\label{fr:new:create-account} As a New User, I want to be able to register an account so that I can access the application's functionality.
+\item\label{fr:new:create-account-error} As a New User, if there is an error during the registration process, I want to get the error message displayed so that I know the reason for the failure.
+\end{enumerate}
+
+
+\subsection{Parent user stories}\label{subsec:requirements:functional:parent}
+\begin{enumerate}[label=FR \arabic*.,leftmargin=3\parindent, start=4]
+\item\label{fr:parent:login} As a Parent, I want to be able to log in to my account so that I can have access to the saved data and operate on it.
+\item\label{fr:parent:login-error} As a Parent, if there is an error during the login process, I want to get the error message displayed so that I know the reason for the failure.
+\item\label{fr:parent:logout-parent} As a Parent, I want to be able to log out of my account on my device so that I do not have access to the application's functionality.
+\item\label{fr:parent:logout-child} As a Parent, I want to be able to log out of my account on my child's device so that they do not have access to the application's functionality.
+\item\label{fr:parent:belonging-parent} As a Parent, I want to be able to change device belonging so that a child can access their account on my device.
+\item\label{fr:parent:belonging-child} As a Parent, I want to be able to change my child's device belonging so that I can access my account on their device.
+\item\label{fr:parent:children-list} As a Parent, I want to be able to display a list of my children so that I can choose whose profile I want to manage.
+\item\label{fr:parent:children-profile} As a Parent, I want to be able to display a chosen child's profile information so that I can recollect their number of points, tasks and rewards.
+\item\label{fr:parent:children-add} As a Parent, I want to be able to add a child's profile so that they can access it.
+\item\label{fr:parent:children-edit} As a Parent, I want to be able to edit my child's profile so that I can reflect any changes in reality or correct my mistakes.
+\item\label{fr:parent:children-delete} As a Parent, I want to be able to delete my child's profile so that I do not see it on the children's list.
+\item\label{fr:parent:tasks-add} As a Parent, I want to be able to add new tasks to a child's profile so that I can set their goals.
+\item\label{fr:parent:rewards-add} As a Parent, I want to be able to add new rewards to a child's profile so that I can reward them for achieving the goals.
+\item\label{fr:parent:tasks-content} As a Parent, I want to be able to define tasks' title and description so that I can specify my expectations.
+\item\label{fr:parent:rewards-content} As a Parent, I want to be able to define rewards' title and description so that I can portray it better.
+\item\label{fr:parent:tasks-confirm} As a Parent, when a child performs their task, I want to be able to mark the task as done so that I can distinguish them from tasks to be done.
+\item\label{fr:parent:rewards-confirm} As a Parent, when a child receives their reward, I want to be able to mark the reward as claimed so that I can distinguish them from the still available rewards.
+\item\label{fr:parent:rewards-unavailable} As a Parent, I want to be able to display rewards that my child has too few points to claim so that I know which rewards are not yet available for them.
+\item\label{fr:parent:tasksrewards-points} As a Parent, I want to be able to define tasks' and or rewards' points so that I can motivate my child further.
+\item\label{fr:parent:tasksrewards-change} As a Parent, when I change the status of a child's task or reward I want their points to change so that I know what their current balance is.
+\item\label{fr:parent:tasksrewards-list} As a Parent, I want to be able to display a list of the chosen child's tasks or rewards so that I can have a clear representation of their state.
+\item\label{fr:parent:tasksrewards-edit} As a Parent, I want to be able to edit tasks or rewards so that I can correct my mistakes or adapt its content to new requirements.
+\item\label{fr:parent:tasksrewards-delete} As a Parent, I want to be able to delete tasks or rewards so that the list of tasks does not contain unnecessary elements.
+\end{enumerate}
+
+
+\subsection{Child user stories}\label{subsec:requirements:functional:parent}
+\begin{enumerate}[label=FR \arabic*.,leftmargin=3\parindent, start=27]
+\item\label{fr:child:profile} As a Child, I want to be able to display my profile information so that I can recollect my number of points, tasks and rewards.
+\item\label{fr:child:tasksrewards-list} As a Child, I want to be able to display a list of my tasks or rewards so that I can have a clear representation of their state.
+\item\label{fr:child:tasks-tododone} As a Child, I want to be able to display done and to-do tasks separately so that I can distinguish between them.
+\item\label{fr:child:rewards-availabeclaimed} As a Child, I want to be able to display available and claimed rewards separately so that I can distinguish between them.
+\item\label{fr:child:rewards-unavailable} As a Child, I want to be able to display rewards that I have too few points to claim so that I know which rewards are not yet available for me.
+\end{enumerate}
+
+
+\section{Non-functional requirements}\label{sec:requirements:functional}
+
+
+
