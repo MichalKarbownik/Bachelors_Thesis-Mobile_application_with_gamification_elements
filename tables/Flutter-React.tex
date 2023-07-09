@@ -1,0 +1,62 @@
+\begin{table}[htb]
+\centering
+\begin{tabular*}{\linewidth}
+{p{0.23\linewidth}p{0.35\linewidth}p{0.35\linewidth}}
+\toprule
+\multicolumn{1}{c}{Aspect} & \multicolumn{2}{c}{Technology} 
+
+\\
+
+\cmidrule{2-3} 
+& \multicolumn{1}{c}{Flutter}
+& \multicolumn{1}{c}{React Native} 
+
+\\
+
+\midrule
+
+UI components 
+
+& Default package provides numerous components with consistent look across platforms (able to imitate platform-specific look).
+
+& Uses native components, gives more flexibility in terms of customisation, but takes longer to achieve some results.
+
+\\
+
+Package library
+
+& Separation of verified \textit{publishers} and unverified \textit{uploaders} on \textit{pub.dev}\tablefootnote{Flutter package registry publishing guide, https://pub.dev/help/publishing (accessed Dec. 06, 2020).}$^{,}$\tablefootnote{Flutter package registry verification process,  https://dart.dev/tools/pub/verified-publishers (accessed Dec. 06, 2020).}, resulting in a better packages quality.
+
+& Anyone being able to publish to the \textit{npm registry}\tablefootnote{Node Package Manager registry publishing guide, https://docs.npmjs.com/about-the-public-npm-registry (accessed Dec. 06, 2020).}, which sometimes results in lower quality and information overload.
+
+\\
+
+Documentation
+
+& Extensive, detailed, centralized. 
+
+& Not as extensive, detailed, decentralized (responsibilities shifted onto particular packages). 
+
+\\
+
+Development
+
+& Custom, fresh ecosystem, but providing just enough tools.
+
+& Utilizing extensive web ecosystem improved for years.
+
+\\
+
+Maturity
+
+& Quite young, yet mature; growing rapidly. 
+
+& Mature and growing.
+
+\\
+\bottomrule
+
+\end{tabular*}
+\caption{Comparison of \textit{React Native} and \textit{Flutter}}
+\label{tab:tools:architecture:application:flutter-react}
+\end{table}

@@ -1,0 +1,57 @@
+\newcommand{\neworrenewcommand}[1]{\providecommand{#1}{}\renewcommand{#1}}
+
+\newcommand{\UseCaseTable}[9]{%
+\neworrenewcommand{\UseCaseTableHelper}[2]{%
+% #1 - UC number
+% #2 - UC identifier
+% #3 - UC name
+% #4 - Primary Actor
+% #5 - Trigger
+% #6 - Preconditions
+% #7 - Postconditions
+% #8 - Basic flow
+% #9 - Alternative flows
+% ##1 - Exceptions
+% ##2 - Extensions
+\begin{table}[htb]
+\centering
+\begin{tabular*}{\linewidth}
+{p{0.2\linewidth}p{0.74\linewidth}}
+\toprule
+Use Case & UC#1
+\\
+\midrule 
+Name & #3
+\\
+\midrule 
+Primary actor & #4
+\\
+\midrule 
+Trigger & #5
+\\
+\midrule 
+Preconditions & #6
+\\
+\midrule 
+Postconditions & #7
+\\
+\midrule 
+Basic flow & #8
+\\
+\midrule 
+Alternative flows & #9
+\\
+\midrule 
+Exceptions & ##1
+\\
+\midrule 
+Extensions & ##2
+\\
+\bottomrule
+\end{tabular*}
+\caption{\textit{#3} use case description}
+\label{tab:use-case:#2}
+\end{table}
+}
+\UseCaseTableHelper
+}

@@ -1,0 +1,506 @@
+\UseCaseTable{1}
+{view-tasks}
+{View Tasks}
+{Child}
+{A Child wants to see their tasks.}
+{\begin{enumerate} % Preconditions
+    \item A child's profile has been chosen.
+\end{enumerate}}
+{\begin{enumerate} % Postconditions
+    \item The Child's tasks are displayed.
+\end{enumerate}}
+{\begin{enumerate} % Base flow
+    \item The Child navigates to a tasks screen.
+    \item If there are tasks assigned to the child, they are displayed.
+\end{enumerate}}
+{\begin{enumerate} % Alternative flow
+[label=2.\alph*.]
+    \item If there are no tasks assigned to the child, an information about it is displayed instead.
+\end{enumerate}}
+{-} % Exceptions
+{-} % Extensions
+
+
+\UseCaseTable{2}
+{view-profile}
+{View Profile}
+{Child}
+{A Child wants to see their profile information.}
+{\begin{enumerate} % Preconditions
+    \item A child's profile has been chosen.
+\end{enumerate}}
+{\begin{enumerate} % Postconditions
+    \item The Child's profile information is displayed.
+\end{enumerate}}
+{\begin{enumerate} % Base flow
+    \item The Child navigates to a profile screen.
+    \item The profile information is displayed.
+\end{enumerate}}
+{-} % Alternative flow
+{-} % Exceptions
+{-} % Extensions
+
+
+\UseCaseTable{3}
+{view-rewards}
+{View Rewards}
+{Child}
+{A Child wants to see their rewards.}
+{\begin{enumerate} % Preconditions
+    \item A child's profile has been chosen.
+\end{enumerate}}
+{\begin{enumerate} % Postconditions
+    \item The Child's rewards are displayed.
+\end{enumerate}}
+{\begin{enumerate} % Base flow
+    \item The Child enters a rewards screen.
+    \item If there are rewards assigned to the child, they are displayed.
+\end{enumerate}}
+{\begin{enumerate} % Alternative flow
+[label=2.\alph*.]
+    \item If there are no rewards assigned to the child, an information about it is displayed instead.
+\end{enumerate}}
+{-} % Exceptions
+{-} % Extensions
+
+
+\UseCaseTable{4}
+{filter-tasks}
+{Filter Tasks}
+{Child}
+{A Child wants to filter the displayed tasks.}
+{\begin{enumerate} % Preconditions
+    \item A child's profile has been chosen.
+    \item A tasks screen has been entered.
+\end{enumerate}}
+{\begin{enumerate} % Postconditions
+    \item The displayed Child's tasks are filtered according to the filter choice. 
+\end{enumerate}}
+{\begin{enumerate} % Base flow
+    \item The Child chooses a filter from a list of available filters.
+    \item The displayed tasks are filtered accordingly.
+\end{enumerate}}
+{\begin{enumerate} % Alternative flow
+[label=2.\alph*.]
+    \item If there are no tasks with the assigned filter, an information about it is displayed instead.
+\end{enumerate}}
+{-} % Exceptions
+{-} % Extensions
+
+
+\UseCaseTable{5}
+{filter-rewards}
+{Filter Rewards}
+{Child}
+{A Child wants to filter the displayed rewards.}
+{\begin{enumerate} % Preconditions
+    \item A child's profile has been chosen.
+    \item A rewards screen has been entered.
+\end{enumerate}}
+{\begin{enumerate} % Postconditions
+    \item The displayed Child's rewards are filtered according to the filter choice. 
+\end{enumerate}}
+{\begin{enumerate} % Base flow
+    \item The Child chooses a filter from a list of available filters.
+    \item The displayed rewards are filtered accordingly.
+\end{enumerate}}
+{\begin{enumerate} % Alternative flow
+[label=2.\alph*.]
+    \item If there are no rewards with the assigned filter, an information about it is displayed instead.
+\end{enumerate}}
+{-} % Exceptions
+{-} % Extensions
+
+
+\UseCaseTable{6}
+{add-child}
+{Add Child}
+{Parent}
+{A Parent wants to add a new child's profile.}
+{\begin{enumerate} % Preconditions
+    \item A parent's perspective has been enabled.
+\end{enumerate}}
+{\begin{enumerate} % Postconditions
+   \item A new child's profile is added and visible on the children's profiles list.
+\end{enumerate}}
+{\begin{enumerate} % Base flow
+   \item The Parent clicks an \say{add child} button.
+   \item The Mobile Application displays an \say{add child} form.
+   \item The Parent fills in the form with the new child's profile data and confirms it.
+   \item The Mobile Application sends the data to the Database Service and updates its children list.
+   \item The new child's profile is displayed on the children's profiles list.
+\end{enumerate}}
+{-}% Alternative flow
+{\begin{enumerate} % Exceptions
+[label=3.\alph*.]
+    \item If the input data is not compliant with the validation rules, the system displays an error message.
+\end{enumerate}}
+{-} % Extensions
+
+
+\UseCaseTable{7}
+{add-task}
+{Add Task}
+{Parent}
+{A Parent wants to add a task for their child.}
+{\begin{enumerate} % Preconditions
+    \item A parent's perspective has been enabled.
+    \item A child's profile has been chosen.
+\end{enumerate}}
+{\begin{enumerate} % Postconditions
+   \item A new child's task is added and visible on the child's task screen.
+\end{enumerate}}
+{\begin{enumerate} % Base flow
+   \item The Parent clicks an \say{add task} button.
+   \item The Mobile Application displays an \say{add task} form.
+   \item The Parent fills in the form with the new task's data and confirms it.
+   \item The Mobile Application sends the data to the Database Service and updates its tasks list.
+   \item The new task is displayed on the tasks list.
+\end{enumerate}}
+{-}% Alternative flow
+{\begin{enumerate} % Exceptions
+[label=3.\alph*.]
+    \item If the input data is not compliant with the validation rules, the system displays an error message.
+\end{enumerate}}
+{-} % Extensions
+
+
+\UseCaseTable{8}
+{add-reward}
+{Add Reward}
+{Parent}
+{A Parent wants to add a reward for their child.}
+{\begin{enumerate} % Preconditions
+    \item A parent's perspective is enabled.
+    \item A child's profile is chosen.
+\end{enumerate}}
+{\begin{enumerate} % Postconditions
+   \item A new child's reward is added and visible on the child's task screen.
+\end{enumerate}}
+{\begin{enumerate} % Base flow
+   \item The Parent clicks an \say{add reward} button.
+   \item The Mobile Application displays an \say{add reward} form.
+   \item The Parent fills in the form with the new reward's data and confirms it.
+   \item The Mobile Application sends the data to the Database Service and updates its rewards list.
+   \item The new reward is displayed on the rewards list.
+\end{enumerate}}
+{-}% Alternative flow
+{\begin{enumerate} % Exceptions
+[label=3.\alph*.]
+    \item If the input data is not compliant with the validation rules, the system displays an error message.
+\end{enumerate}}
+{-} % Extensions
+
+
+\UseCaseTable{9}
+{edit-task}
+{Edit Task}
+{Parent}
+{A Parent wants to edit their child's task.}
+{\begin{enumerate} % Preconditions
+    \item A parent's perspective has been enabled.
+    \item A child's profile has been chosen.
+\end{enumerate}}
+{\begin{enumerate} % Postconditions
+   \item An edited task has its details or state changed.
+\end{enumerate}}
+{\begin{enumerate} % Base flow
+   \item The Parent long-presses a chosen task from the tasks list.
+   \item The Mobile Application displays an \say{edit task} form with the task data pre-filled.
+   \item The Parent amends the data and confirms the changes.
+   \item The Mobile Application sends the data to the Database Service and updates its tasks list.
+   \item The task with edited data is displayed on the tasks list.
+\end{enumerate}}
+{\begin{enumerate} % Alternative flow
+    \item[1.a.] The Parent taps a chosen task from the tasks list.
+    \item[2.a.] The Parent confirms changing the task state.
+\end{enumerate}
+}
+{\begin{enumerate} % Exceptions
+    \item[3.b.] If the input data is not compliant with the validation rules, the system displays an error message.
+\end{enumerate}}
+{-} % Extensions
+
+
+\UseCaseTable{10}
+{edit-reward}
+{Edit Reward}
+{Parent}
+{A Parent wants to edit their child's reward.}
+{\begin{enumerate} % Preconditions
+    \item A parent's perspective has been enabled.
+    \item A child's profile has been chosen.
+\end{enumerate}}
+{\begin{enumerate} % Postconditions
+   \item An edited reward has its details or state changed.
+\end{enumerate}}
+{\begin{enumerate} % Base flow
+   \item The Parent long-presses a chosen reward from the rewards list.
+   \item The Mobile Application displays an \say{edit reward} form with the reward data pre-filled.
+   \item The Parent amends the data and confirms the changes.
+   \item The Mobile Application sends the data to the Database Service and updates its rewards list.
+   \item The reward with edited data is displayed on the rewards list.
+\end{enumerate}}
+{\begin{enumerate} % Alternative flow
+    \item[1.a.] The Parent taps a chosen reward from the rewards list.
+    \item[2.a.] The Parent confirms changing the reward state.
+\end{enumerate}
+}
+{\begin{enumerate} % Exceptions
+    \item[3.b.] If the input data is not compliant with the validation rules, the system displays an error message.
+\end{enumerate}}
+{-} % Extensions
+
+
+\UseCaseTable{11}
+{edit-child}
+{Edit Child}
+{Parent}
+{A Parent wants to edit their child's profile.}
+{\begin{enumerate} % Preconditions
+    \item A parent's perspective has been enabled.
+    \item A child's profile has been chosen.
+\end{enumerate}}
+{\begin{enumerate} % Postconditions
+   \item An edited child's profile has its details changed.
+\end{enumerate}}
+{\begin{enumerate} % Base flow
+   \item The Parent navigates to the child's profile screen and clicks an \say{edit child} button.
+   \item The Mobile Application displays an \say{edit child} form with the child's profile data pre-filled.
+   \item The Parent amends the data and confirms the changes.
+   \item The Mobile Application sends the data to the Database Service and updates its child's profile data.
+   \item The child's profile with edited data is displayed on the children's profiles list.
+\end{enumerate}}
+{-} % Alternative flow
+{\begin{enumerate} % Exceptions
+    \item[3.a.] If the input data is not compliant with the validation rules, the system displays an error message.
+\end{enumerate}}
+{-} % Extensions
+
+
+\UseCaseTable{12}
+{delete-task}
+{Delete Task}
+{Parent}
+{A Parent wants to remove their child's task.}
+{\begin{enumerate} % Preconditions
+    \item A parent's perspective has been enabled.
+    \item A child's task edit form has been entered.
+\end{enumerate}}
+{\begin{enumerate} % Postconditions
+   \item A deleted task is available neither for the child, nor the parent.
+\end{enumerate}}
+{\begin{enumerate} % Base flow
+   \item The Parent clicks a \say{delete task} button and confirms the action.
+   \item The Mobile Application sends the delete request to the Database Service and updates its child's tasks list.
+   \item The deleted task is not displayed on the tasks list.
+\end{enumerate}}
+{-} % Alternative flow
+{-} % Exceptions
+{-} % Extensions
+
+
+\UseCaseTable{13}
+{delete-reward}
+{Delete Reward}
+{Parent}
+{A Parent wants to remove their child's reward.}
+{\begin{enumerate} % Preconditions
+    \item A parent's perspective has been enabled.
+    \item A child's reward edit form has been entered.
+\end{enumerate}}
+{\begin{enumerate} % Postconditions
+   \item A deleted reward is available neither for the child, nor the parent.
+\end{enumerate}}
+{\begin{enumerate} % Base flow
+   \item The Parent clicks a \say{delete task} button and confirms the action.
+   \item The Mobile Application sends the delete request to the Database Service and updates its child's tasks list.
+   \item The deleted reward is not displayed on the rewards list.
+\end{enumerate}}
+{-} % Alternative flow
+{-} % Exceptions
+{-} % Extensions
+
+\UseCaseTable{14}
+{delete-child}
+{Delete Child}
+{Parent}
+{A Parent wants to remove their child's profile.}
+{\begin{enumerate} % Preconditions
+    \item A parent's perspective has been enabled.
+    \item A child's profile edit form has been entered.
+\end{enumerate}}
+{\begin{enumerate} % Postconditions
+   \item A deleted child's profile is available neither for the child, nor the parent.
+\end{enumerate}}
+{\begin{enumerate} % Base flow
+   \item The Parent clicks a \say{delete child} button and confirms the action.
+   \item The Mobile Application sends the delete request to the Database Service for all the child's tasks, rewards along with the child's profile and updates its children's profiles list.
+   \item The deleted child's profile is not displayed on the children's profiles list.
+\end{enumerate}}
+{-} % Alternative flow
+{-} % Exceptions
+{-} % Extensions
+
+\UseCaseTable{15}
+{choose-child}
+{Choose Child}
+{Parent}
+{A Parent wants to choose the child's profile to start managing it.}
+{\begin{enumerate} % Preconditions
+    \item A parent's perspective has been enabled.
+\end{enumerate}}
+{\begin{enumerate} % Postconditions
+   \item A child's profile is selected and can be managed.
+\end{enumerate}}
+{\begin{enumerate} % Base flow
+   \item The Parent clicks a \say{child profile} element on the children's profiles list.
+   \item The Mobile Application navigates to the child's profile screen.
+\end{enumerate}}
+{-} % Alternative flow
+{-} % Exceptions
+{\begin{enumerate} % Extensions
+   \item \textit{Add Task} (Table \ref{tab:use-case:add-task})
+   \item \textit{Add Reward} (Table \ref{tab:use-case:add-reward})
+   \item \textit{Edit Task} (Table \ref{tab:use-case:edit-task})
+   \item \textit{Edit Reward} (Table \ref{tab:use-case:edit-reward})
+   \item \textit{Edit Child} (Table \ref{tab:use-case:edit-child})
+   \item \textit{Delete Task} (Table \ref{tab:use-case:delete-task})
+   \item \textit{Delete Reward} (Table \ref{tab:use-case:delete-reward})
+   \item \textit{Delete Child} (Table \ref{tab:use-case:delete-child})
+\end{enumerate}}
+
+\UseCaseTable{16}
+{sign-in}
+{Sign in}
+{Parent}
+{A Parent wants to access their account.}
+{\begin{enumerate} % Preconditions
+    \item A Parent is not logged in.
+    \item A device belonging choice screen has been entered.
+\end{enumerate}}
+{\begin{enumerate} % Postconditions
+   \item A parent is logged in and can access their account.
+\end{enumerate}}
+{\begin{enumerate} % Base flow
+   \item The Parent chooses the \textit{parent} device belonging.
+   \item The Mobile Application navigates to the register screen.
+   \item The Parent clicks a \textit{Sign in instead} button.
+   \item The Mobile Application navigates to the login screen.
+   \item The Parent fills in the login data and confirms it.
+   \item The Mobile Application sends the data to the Authentication Service.
+   \item The Authentication Service confirms the data is correct.
+   \item The Mobile Application saves user's authentication token and displays the parent's perspective.
+\end{enumerate}}
+{\begin{enumerate} % Alternative flow
+    \item[1.a.] The Parent chooses the \textit{child} device belonging.
+    \item[2.a.] The flow continues from point no. 4 of the base flow.
+\end{enumerate}}
+{\begin{enumerate} % Exceptions
+    \item[3.b.] The Authentication Service denies the data is correct.
+    \item[4.b.] The Mobile Application displays an error message.
+\end{enumerate}}
+{-} % Extensions
+
+\UseCaseTable{17}
+{sign-out}
+{Sign out}
+{Parent}
+{A Parent wants to stop accessing their account.}
+{\begin{enumerate} % Preconditions
+    \item A Parent is logged in.
+    \item A settings screen has been entered.
+\end{enumerate}}
+{\begin{enumerate} % Postconditions
+   \item A parent is logged out and cannot access their account.
+\end{enumerate}}
+{\begin{enumerate} % Base flow
+   \item The Parent clicks \textit{Sign out} button.
+   \item The Mobile Application sends the \textit{sign out} request to the Authentication Service
+   \item The Mobile Application navigates to the 
+\end{enumerate}}
+{-}% Alternative flow
+{-}
+{-} % Extensions
+
+\UseCaseTable{18}
+{change-device-belonging}
+{Change Device Belonging}
+{Parent}
+{A Parent wants to toggle between the user's perspectives.}
+{\begin{enumerate} % Preconditions
+    \item A Parent is logged in.
+    \item A settings screen has been entered.
+\end{enumerate}}
+{\begin{enumerate} % Postconditions
+   \item A device belonging is changed.
+\end{enumerate}}
+{\begin{enumerate} % Base flow
+   \item If the \textit{parent's} device belonging is chosen, the Parent selects the \textit{child's} device belonging.
+   \item The Mobile Application displays an additional child's profile select field.
+   \item The Parent chooses a specific child's profile and confirms their choice.
+   \item The Mobile Application saves the selected device belonging.
+\end{enumerate}}
+{\begin{enumerate} % Base flow
+    \item[1.a.] If the \textit{child's} device belonging is chosen, the Parent selects the \textit{parent's} device belonging.
+    \item[2.a.] The Mobile Application hides the additional child's profile select field.
+    \item[3.a.] The Parent confirms their choice.
+\end{enumerate}
+\midrule
+\begin{enumerate}
+    \item[1.b.] If the \textit{child's} device belonging is chosen, the Parent selects another child in the child's profile select field.
+    \item[2.b.] - 
+    \item[3.b.] The Parent confirms their choice.
+\end{enumerate}}% Alternative flow
+{-} % Exceptions
+{-} % Extensions
+
+\UseCaseTable{19}
+{change-settings}
+{Change settings}
+{Parent}
+{A Parent wants to display available settings.}
+{\begin{enumerate} % Preconditions
+    \item A Parent is logged in.
+    \item A children's profiles list screen (in the parent's perspective) or a child's profile screen (in the child's perspective) is entered.
+\end{enumerate}}
+{\begin{enumerate} % Postconditions
+   \item A settings screen is displayed.
+\end{enumerate}}
+{\begin{enumerate} % Base flow
+   \item The Parent clicks a settings button.
+   \item The Parent enters their password to authorize settings edition.
+   \item The Mobile Application displays screen setting.
+\end{enumerate}}
+{-} % Alternative flow
+{-} % Exceptions
+{\begin{enumerate} % Extensions
+   \item \textit{Sign out} (Table \ref{tab:use-case:sign-out})
+   \item \textit{Change Device Belonging} (Table \ref{tab:use-case:change-device-belonging})
+\end{enumerate}}
+
+\UseCaseTable{20}
+{sign-up}
+{Sign up}
+{New User}
+{A New User wants to create an account.}
+{\begin{enumerate} % Preconditions
+    \item The Mobile Application does not have device belonging or login data saved.
+\end{enumerate}}
+{\begin{enumerate} % Postconditions
+   \item A new account is registered, and the New User becomes a Parent.
+\end{enumerate}}
+{\begin{enumerate} % Base flow
+   \item The New User chooses the parent's device belonging.
+   \item The Mobile Application saves the device belonging and navigates to the register screen.
+   \item The New User enters the new account data and confirms it with a button.
+   \item The Mobile Application sends the data to the Authentication Service.
+   \item The Authentication Service confirms the data is correct.
+   \item The Mobile Application saves user's authentication token and displays the parent's perspective.
+\end{enumerate}}
+{-} % Alternative flow
+{\begin{enumerate} % Exceptions
+    \item[5.a.] The Authentication Service denies the data is correct.
+    \item[6.a.] The Mobile Application displays an error message.
+\end{enumerate}}
+{-} % Extensions
